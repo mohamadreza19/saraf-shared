@@ -1,0 +1,8 @@
+<form [formGroup]="formGroup">
+  <ng-container *ngFor="let key of helper.makeControlsKeyIterable(formGroup.controls)">
+    <shared-input-wrapper
+      [control]="helper.asFormControl(formGroup.controls[key])"
+      [config]="formSection.getControlConfig(key)"
+      [computedDependencies]="formSection.resolveInputDependency(key, formGroup)"></shared-input-wrapper>
+  </ng-container>
+</form>

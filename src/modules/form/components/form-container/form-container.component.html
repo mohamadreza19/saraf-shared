@@ -1,0 +1,7 @@
+@if(formSections){
+<shared-form-wrapper
+  [formSection]="section"
+  *ngFor="let section of formSections.values()"
+  (formCreated)="collectFormGroup.emit($event)">
+</shared-form-wrapper>
+}

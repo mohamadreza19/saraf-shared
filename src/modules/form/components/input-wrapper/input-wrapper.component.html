@@ -1,0 +1,6 @@
+<ng-container *ngIf="config">
+  @switch ( config.type ) { @case ('text') {
+
+  <shared-text-input [control]="control" [config]="config"></shared-text-input>
+  } }
+</ng-container>
